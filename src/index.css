@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold-100: #fff5cc;
+    --gold-200: #fde082;
+    --gold-300: #eec351;
+    --gold-400: #d4af37;
+    --gold-500: #b8860b;
+    --gold-600: #8c6708;
+    --emerald-950: #04130d;
+    --emerald-900: #072016;
+    --emerald-800: #0d3525;
+    --emerald-700: #144e37;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #04120c;
+    color: #ede5d0;
+  }
+
+  h1, h2, h3, .font-serif-elegant, .font-serif-royal {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-arabic {
+    font-family: 'Amiri', serif;
+  }
+
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+  }
+
+  .font-subserif {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+/* Luxury Metallic Gold Gradients */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #fff2a3 0%, #eec351 30%, #d4af37 60%, #a17816 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-text-shimmer {
+  background: linear-gradient(90deg, #d4af37 0%, #fff6ba 25%, #d4af37 50%, #fff6ba 75%, #d4af37 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(135deg, #fceda2, #d4af37, #9b6c12, #d4af37) 1;
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25), inset 0 0 15px rgba(212, 175, 55, 0.12);
+}
+
+.gold-glow-lg {
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.35), inset 0 0 25px rgba(212, 175, 55, 0.18);
+}
+
+/* Islamic Arch SVG Frame Style */
+.islamic-frame {
+  position: relative;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  background: radial-gradient(circle at 50% 0%, rgba(20, 78, 55, 0.3) 0%, rgba(4, 18, 12, 0.85) 100%);
+}
+
+/* Hardware Accelerated Lantern Swing */
+@keyframes lanternSwingLeft {
+  0%, 100% {
+    transform: rotate(2.5deg);
+  }
+  50% {
+    transform: rotate(-2.5deg);
+  }
+}
+
+@keyframes lanternSwingRight {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+.animate-lantern-left {
+  transform-origin: top center;
+  animation: lanternSwingLeft 5.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-lantern-right {
+  transform-origin: top center;
+  animation: lanternSwingRight 6.2s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Candle Glow Pulse */
+@keyframes flamePulse {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px rgba(253, 224, 130, 0.8));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 16px rgba(253, 224, 130, 1));
+  }
+}
+
+.animate-flame {
+  animation: flamePulse 2.8s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Shimmer Animation */
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Slow Spin for Arabesque Mandala */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 50s linear infinite;
+  will-change: transform;
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 4.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Smooth Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 3D Envelope Animation Styles */
+.perspective-1000 {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.envelope-flap {
+  transform-origin: top center;
+  transition: transform 0.85s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.envelope-flap.open {
+  transform: rotateX(180deg);
+}
+
+.envelope-card {
+  transition: transform 0.9s cubic-bezier(0.34, 1.3, 0.64, 1), opacity 0.7s ease;
+  will-change: transform, opacity;
+}
+
+.envelope-card.slide-out {
+  transform: translateY(-130px) scale(1.03);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #04120c;
+}
+::-webkit-scrollbar-thumb {
+  background: #b8860b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Subtle background damask pattern */
+.bg-islamic-pattern {
+  background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 0);
+  background-size: 28px 28px;
+}
