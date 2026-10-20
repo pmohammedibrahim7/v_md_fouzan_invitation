@@ -25,7 +25,7 @@ export const HangingLanterns: React.FC = () => {
         </div>
 
         {/* Lantern Body */}
-        <div className="relative w-11 h-18 md:w-14 md:h-24 islamic-lantern-glass border border-[#d4af37]/70 rounded-b-xl overflow-hidden bg-gradient-to-b from-[#241a05]/90 via-[#0d2a1c]/90 to-[#04120c]/90 shadow-[0_10px_25px_rgba(212,175,55,0.3)]">
+        <div className="relative w-11 h-18 md:w-14 md:h-24 islamic-lantern-glass border-2 border-[#d4af37]/80 rounded-b-xl overflow-hidden bg-gradient-to-b from-[#3a2007]/90 via-[#4e2d09]/90 to-[#2c1704]/90 shadow-[0_10px_25px_rgba(212,175,55,0.45)]">
           {/* Ornate Islamic Star Lattice Lines */}
           <div className="absolute inset-0 flex items-center justify-center opacity-40">
             <svg width="100%" height="100%" viewBox="0 0 50 80" fill="none" stroke="#d4af37" strokeWidth="0.8">
@@ -83,7 +83,7 @@ export const HangingLanterns: React.FC = () => {
         </div>
 
         {/* Lantern Body */}
-        <div className="relative w-10 h-16 md:w-13 md:h-22 islamic-lantern-glass border border-[#d4af37]/70 rounded-b-xl overflow-hidden bg-gradient-to-b from-[#241a05]/90 via-[#0d2a1c]/90 to-[#04120c]/90 shadow-[0_10px_25px_rgba(212,175,55,0.3)]">
+        <div className="relative w-10 h-16 md:w-13 md:h-22 islamic-lantern-glass border-2 border-[#d4af37]/80 rounded-b-xl overflow-hidden bg-gradient-to-b from-[#3a2007]/90 via-[#4e2d09]/90 to-[#2c1704]/90 shadow-[0_10px_25px_rgba(212,175,55,0.45)]">
           <div className="absolute inset-0 flex items-center justify-center opacity-40">
             <svg width="100%" height="100%" viewBox="0 0 50 80" fill="none" stroke="#d4af37" strokeWidth="0.8">
               <path d="M25 5 L45 25 L45 55 L25 75 L5 55 L5 25 Z" />

@@ -15,7 +15,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#04120c] bg-islamic-pattern text-[#ede5d0] selection:bg-[#d4af37] selection:text-black">
+    <div className="relative min-h-screen bg-[#FFEBEC] bg-islamic-pattern text-[#2d1720] selection:bg-[#d4af37] selection:text-black">
       {/* 60fps Gold Dust Particle System */}
       <GoldParticleBackground />
 
@@ -29,13 +29,13 @@ export const App: React.FC = () => {
       />
 
       {/* Sticky Top Navigation Bar */}
-      <nav className="fixed top-0 left-0 right-0 z-30 bg-[#04120c]/85 backdrop-blur-md border-b border-[#d4af37]/25 px-4 py-3 flex items-center justify-between transition-all duration-500">
+      <nav className="fixed top-0 left-0 right-0 z-30 bg-[#FFEBEC]/90 backdrop-blur-md border-b border-[#d4af37]/35 px-4 py-3 flex items-center justify-between transition-all duration-500 shadow-sm">
         <div className="flex items-center gap-2.5">
           {/* Crescent & Star Monogram for Fouzan & Zehra */}
-          <div className="w-8 h-8 rounded-full border border-[#d4af37]/60 flex items-center justify-center bg-[#072016] shadow-sm">
-            <span className="font-serif-elegant font-bold text-xs text-[#ffd700]">F&amp;Z</span>
+          <div className="w-8 h-8 rounded-full border border-[#b8860b]/60 flex items-center justify-center bg-white/95 shadow-sm">
+            <span className="font-serif-elegant font-bold text-xs text-[#8c5808]">F&amp;Z</span>
           </div>
-          <span className="font-serif-elegant tracking-widest text-xs md:text-sm text-[#fceba2] font-semibold uppercase">
+          <span className="font-serif-elegant tracking-widest text-xs md:text-sm text-[#663c48] font-bold uppercase">
             WEDDING INVITATION
           </span>
         </div>
@@ -44,18 +44,18 @@ export const App: React.FC = () => {
           {/* View Envelope Seal Button */}
           <button
             onClick={() => setIsEnvelopeOpen(false)}
-            className="text-xs px-3.5 py-1.5 rounded-full bg-[#0d3525] border border-[#d4af37]/40 text-[#fceba2] hover:bg-[#144e37] hover:border-[#ffd700] transition-all flex items-center gap-1.5 shadow-sm hover:scale-105"
+            className="text-xs px-3.5 py-1.5 rounded-full bg-white/95 border border-[#d4af37]/55 text-[#542d38] hover:bg-[#fff0f2] hover:border-[#b8860b] transition-all flex items-center gap-1.5 shadow-sm hover:scale-105"
           >
-            <MailOpen className="w-3.5 h-3.5 text-[#ffd700]" />
-            <span>Envelope</span>
+            <MailOpen className="w-3.5 h-3.5 text-[#b8860b]" />
+            <span className="font-serif-elegant font-semibold">Envelope</span>
           </button>
 
           {/* Quick Events Scroll */}
           <a
             href="#events"
-            className="text-xs px-4 py-1.5 rounded-full bg-gradient-to-r from-[#ffd700] via-[#d4af37] to-[#b8860b] text-black font-serif-elegant font-bold hover:opacity-95 transition-all flex items-center gap-1.5 shadow-[0_0_15px_rgba(212,175,55,0.4)] hover:scale-105"
+            className="text-xs px-4 py-1.5 rounded-full bg-gradient-to-r from-[#e5be53] via-[#ffd700] to-[#c99718] text-[#2d1720] font-serif-elegant font-bold hover:opacity-95 transition-all flex items-center gap-1.5 shadow-[0_4px_15px_rgba(212,175,55,0.35)] hover:scale-105"
           >
-            <Calendar className="w-3.5 h-3.5" />
+            <Calendar className="w-3.5 h-3.5 text-[#2d1720]" />
             Events
           </a>
         </div>

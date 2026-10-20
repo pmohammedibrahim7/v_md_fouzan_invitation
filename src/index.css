@@ -8,16 +8,14 @@
     --gold-400: #d4af37;
     --gold-500: #b8860b;
     --gold-600: #8c6708;
-    --emerald-950: #04130d;
-    --emerald-900: #072016;
-    --emerald-800: #0d3525;
-    --emerald-700: #144e37;
+    --rose-bg: #FFEBEC;
+    --rose-dark: #2d1720;
   }
 
   body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #04120c;
-    color: #ede5d0;
+    background-color: #FFEBEC;
+    color: #2d1720;
   }
 
   h1, h2, h3, .font-serif-elegant, .font-serif-royal {
@@ -37,19 +35,19 @@
   }
 }
 
-/* Luxury Metallic Gold Gradients */
+/* Luxury Metallic Gold Gradients for Light Blush Theme */
 .gold-text-gradient {
-  background: linear-gradient(135deg, #fff2a3 0%, #eec351 30%, #d4af37 60%, #a17816 100%);
+  background: linear-gradient(135deg, #7c4c02 0%, #b8860b 35%, #d4af37 65%, #6b3f02 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gold-text-shimmer {
-  background: linear-gradient(90deg, #d4af37 0%, #fff6ba 25%, #d4af37 50%, #fff6ba 75%, #d4af37 100%);
+  background: linear-gradient(90deg, #8a5908 0%, #d4af37 25%, #ffda66 50%, #d4af37 75%, #8a5908 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 6s linear infinite;
+  animation: shimmer 5s linear infinite;
 }
 
 .gold-border-gradient {
@@ -57,11 +55,27 @@
 }
 
 .gold-glow {
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25), inset 0 0 15px rgba(212, 175, 55, 0.12);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.3), inset 0 0 15px rgba(212, 175, 55, 0.15);
 }
 
 .gold-glow-lg {
-  box-shadow: 0 0 40px rgba(212, 175, 55, 0.35), inset 0 0 25px rgba(212, 175, 55, 0.18);
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.4), inset 0 0 25px rgba(212, 175, 55, 0.2);
+}
+
+/* 3D Realistic Envelope & Wax Seal Utilities */
+.shadow-3d-envelope {
+  box-shadow: 
+    0 25px 60px -15px rgba(80, 25, 40, 0.38),
+    0 12px 25px -8px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(212, 175, 55, 0.4);
+}
+
+.shadow-3d-seal {
+  box-shadow:
+    0 14px 28px rgba(70, 20, 10, 0.5),
+    0 6px 12px rgba(0, 0, 0, 0.25),
+    inset 0 3px 5px rgba(255, 255, 255, 0.8),
+    inset 0 -5px 10px rgba(90, 40, 0, 0.7);
 }
 
 /* Islamic Arch SVG Frame Style */
@@ -206,18 +220,18 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #04120c;
+  background: #FFEBEC;
 }
 ::-webkit-scrollbar-thumb {
-  background: #b8860b;
+  background: #d4af37;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #d4af37;
+  background: #b8860b;
 }
 
 /* Subtle background damask pattern */
 .bg-islamic-pattern {
-  background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 0);
-  background-size: 28px 28px;
+  background-image: radial-gradient(rgba(180, 110, 125, 0.12) 1.2px, transparent 0);
+  background-size: 26px 26px;
 }

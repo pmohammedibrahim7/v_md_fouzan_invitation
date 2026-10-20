@@ -36,11 +36,11 @@ export const GoldParticleBackground: React.FC = () => {
 
     // Gold & Amber palette for particles
     const colors = [
-      'rgba(255, 235, 140, ',
       'rgba(212, 175, 55, ',
-      'rgba(254, 215, 102, ',
-      'rgba(255, 248, 220, ',
       'rgba(184, 134, 11, ',
+      'rgba(202, 148, 26, ',
+      'rgba(224, 170, 45, ',
+      'rgba(166, 118, 10, ',
     ];
 
     // Responsive particle count (fewer on mobile to guarantee 60fps)
