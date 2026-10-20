@@ -108,30 +108,30 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onReopenEnvelope }) =>
       </div>
 
       {/* Names of Groom & Bride */}
-      <div className="py-6 relative">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-8 my-2">
+      <div className="py-4 relative">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 my-2">
           {/* Groom */}
           <div className="flex flex-col items-center">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif-elegant font-bold tracking-wider gold-text-shimmer">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-serif-elegant font-bold tracking-wider gold-text-shimmer">
               V MOHAMMED FOUZAN
             </h1>
-            <span className="text-xs tracking-[0.2em] uppercase text-[#8c5808] font-subserif font-bold mt-1">
+            <span className="text-[11px] tracking-[0.2em] uppercase text-[#8c5808] font-subserif font-bold mt-1">
               Groom
             </span>
           </div>
 
           {/* Heart Connector */}
-          <div className="flex items-center gap-3 text-[#d4af37] my-2 md:my-0">
-            <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-[#d4af37]" />
-            <div className="relative p-2.5 rounded-full border border-[#d4af37]/60 bg-white/95 shadow-[0_4px_15px_rgba(212,175,55,0.3)]">
-              <Heart className="w-5 h-5 text-[#d4af37] fill-[#ffd700] animate-pulse" />
+          <div className="flex items-center gap-3 text-[#d4af37] my-1 md:my-0">
+            <div className="w-10 h-[1px] bg-gradient-to-r from-transparent to-[#d4af37]" />
+            <div className="relative p-2 rounded-full border border-[#d4af37]/60 bg-white/95 shadow-[0_4px_15px_rgba(212,175,55,0.3)]">
+              <Heart className="w-4 h-4 text-[#d4af37] fill-[#ffd700] animate-pulse" />
             </div>
-            <div className="w-12 h-[1px] bg-gradient-to-l from-transparent to-[#d4af37]" />
+            <div className="w-10 h-[1px] bg-gradient-to-l from-transparent to-[#d4af37]" />
           </div>
 
           {/* Bride */}
           <div className="flex flex-col items-center">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif-elegant font-bold tracking-wider gold-text-shimmer">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-serif-elegant font-bold tracking-wider gold-text-shimmer">
               V ZEHRA MEHAR
             </h1>
             <span className="text-xs tracking-[0.2em] uppercase text-[#8c5808] font-subserif font-bold mt-1">

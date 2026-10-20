@@ -34,7 +34,7 @@ export const EnvelopeGatefold: React.FC<EnvelopeGatefoldProps> = ({ onOpen, isOp
       setOpeningState('flap-open');
     }, 280);
 
-    // Step 3: Slide the card up from within envelope (after 750ms)
+    // Step 3: Slide the card up from within envelope in 3D (after 850ms)
     setTimeout(() => {
       setOpeningState('card-sliding');
       try {
@@ -55,16 +55,16 @@ export const EnvelopeGatefold: React.FC<EnvelopeGatefoldProps> = ({ onOpen, isOp
       } catch {
         // ignore
       }
-    }, 750);
+    }, 850);
 
-    // Step 4: Fade out the entire envelope modal smoothly (after 1800ms)
+    // Step 4: Fade out the entire envelope modal smoothly (after 2100ms)
     setTimeout(() => {
       setOpeningState('faded-out');
       setTimeout(() => {
         onOpen();
         setOpeningState('closed');
       }, 700);
-    }, 1800);
+    }, 2100);
   };
 
   if (isOpen) {
@@ -90,8 +90,13 @@ export const EnvelopeGatefold: React.FC<EnvelopeGatefoldProps> = ({ onOpen, isOp
         </svg>
       </div>
 
-      {/* Realistic 3D Envelope Container */}
-      <div className="relative w-full max-w-lg md:max-w-xl perspective-1000 select-none">
+      {/* Realistic 3D Envelope Container with 3D Perspective Tilt */}
+      <div
+        className="relative w-full max-w-lg md:max-w-xl perspective-1000 select-none transition-transform duration-700 ease-out"
+        style={{
+          transform: isCardSliding ? 'rotateX(3deg) scale(1.02)' : 'rotateX(0deg) scale(1)',
+        }}
+      >
         
         {/* Multi-Layered 3D Cast Shadow & Metallic Gold Rim */}
         <div className="relative mx-auto rounded-3xl p-[2.5px] bg-gradient-to-b from-[#ffd700] via-[#c4921b] to-[#8c5808] shadow-[0_35px_80px_rgba(50,15,25,0.6),0_15px_30px_rgba(0,0,0,0.35),0_0_0_1px_rgba(255,215,0,0.3)]">
@@ -108,7 +113,7 @@ export const EnvelopeGatefold: React.FC<EnvelopeGatefoldProps> = ({ onOpen, isOp
               </div>
             </div>
 
-            {/* Inner Invitation Letter Card (Slides Up out of Envelope) */}
+            {/* Inner Invitation Letter Card (Slides Up out of Envelope in 3D) */}
             <div
               className={`envelope-card absolute inset-x-5 top-7 bottom-5 rounded-2xl bg-gradient-to-b from-[#ffffff] via-[#fffdfb] to-[#fff3f5] p-6 text-center border-2 border-[#d4af37] shadow-[0_15px_35px_rgba(100,30,50,0.25)] flex flex-col justify-between z-10 ${
                 isCardSliding ? 'slide-out' : ''
@@ -132,18 +137,19 @@ export const EnvelopeGatefold: React.FC<EnvelopeGatefoldProps> = ({ onOpen, isOp
 
               {/* Couple Names on Card */}
               <div className="my-1">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-serif-elegant gold-text-shimmer font-bold tracking-wider">
+                <h2 className="text-base sm:text-lg md:text-xl font-serif-elegant gold-text-shimmer font-bold tracking-wider">
                   V MOHAMMED FOUZAN
                 </h2>
-                <span className="text-xs text-[#8c5808] font-serif-elegant font-bold my-1 block">&amp;</span>
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-serif-elegant gold-text-shimmer font-bold tracking-wider">
+                <span className="text-xs text-[#8c5808] font-serif-elegant font-bold my-0.5 block">&amp;</span>
+                <h2 className="text-base sm:text-lg md:text-xl font-serif-elegant gold-text-shimmer font-bold tracking-wider">
                   V ZEHRA MEHAR
                 </h2>
-                <p className="text-xs font-subserif italic text-[#4a2e37] mt-1.5 font-medium">
+                <p className="text-xs font-subserif italic text-[#4a2e37] mt-1 font-medium">
                   Request the honour of your presence at the Nikah &amp; Valima
                 </p>
-                <div className="flex items-center justify-center gap-2 mt-2 text-[10px] font-mono text-[#8c5808] font-semibold">
-                  <span>SATURDAY, JANUARY 30, 2027 • PERNAMBUT</span>
+                <div className="mt-2 py-1 px-3 rounded-lg bg-[#fff0f2] border border-[#d4af37]/40 flex flex-col items-center justify-center gap-0.5 text-[11px] font-serif-elegant text-[#8c5808] font-bold">
+                  <span className="tracking-wider">SATURDAY, JANUARY 30, 2027</span>
+                  <span className="text-[10px] text-[#2d1720] font-medium">Nikah 11:30 AM &bull; Valima Same Day &bull; Pernambut</span>
                 </div>
               </div>
 
@@ -192,22 +198,50 @@ export const EnvelopeGatefold: React.FC<EnvelopeGatefoldProps> = ({ onOpen, isOp
               </div>
             </div>
 
-            {/* 3D Triangular Top Flap */}
+            {/* 3D Triangular Top Flap with Double-Sided 3D Faces */}
             <div
-              className={`envelope-flap absolute top-0 inset-x-0 h-1/2 z-30 preserve-3d ${
-                isFlapOpen ? 'open' : ''
+              className={`envelope-flap absolute top-0 inset-x-0 h-1/2 preserve-3d ${
+                isFlapOpen ? 'open z-10' : 'z-30'
               }`}
               style={{
-                clipPath: 'polygon(0 0, 100% 0, 50% 100%)',
-                filter: 'drop-shadow(0 14px 20px rgba(60, 18, 30, 0.45))',
+                transformOrigin: 'top center',
               }}
             >
-              {/* Flap Outer Surface with High-End Rose-Cream Gradient & Gold Border */}
-              <div className="w-full h-full bg-gradient-to-b from-[#ffffff] via-[#fae3e6] to-[#f0cbd1] border-b-2 border-[#ffd700] relative flex flex-col items-center pt-5">
-                <span className="font-arabic text-xl text-[#8c5808] font-bold opacity-90">
-                  بِسْمِ اللَّهِ
-                </span>
-                <div className="w-10 h-[1.5px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mt-1" />
+              {/* FRONT FACE of Flap (Visible when closed) */}
+              <div
+                className="absolute inset-0 preserve-3d"
+                style={{
+                  clipPath: 'polygon(0 0, 100% 0, 50% 100%)',
+                  backfaceVisibility: 'hidden',
+                  WebkitBackfaceVisibility: 'hidden',
+                  filter: isFlapOpen ? 'none' : 'drop-shadow(0 14px 20px rgba(60, 18, 30, 0.45))',
+                }}
+              >
+                <div className="w-full h-full bg-gradient-to-b from-[#ffffff] via-[#fae3e6] to-[#f0cbd1] border-b-2 border-[#ffd700] relative flex flex-col items-center pt-5">
+                  <span className="font-arabic text-xl text-[#8c5808] font-bold opacity-90">
+                    بِسْمِ اللَّهِ
+                  </span>
+                  <div className="w-10 h-[1.5px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mt-1" />
+                </div>
+              </div>
+
+              {/* BACK FACE of Flap (Satin Gold Inner Lining, Visible when Open) */}
+              <div
+                className="absolute inset-0"
+                style={{
+                  clipPath: 'polygon(0 0, 100% 0, 50% 100%)',
+                  backfaceVisibility: 'hidden',
+                  WebkitBackfaceVisibility: 'hidden',
+                  transform: 'rotateX(180deg)',
+                }}
+              >
+                <div className="w-full h-full bg-gradient-to-b from-[#fcedb6] via-[#dfb655] to-[#b8860b] border-t-2 border-[#ffd700] shadow-inner relative flex flex-col items-center justify-center">
+                  <div className="opacity-30">
+                    <svg width="60" height="60" viewBox="0 0 100 100" fill="#683f05">
+                      <polygon points="50,5 61,35 95,35 68,55 79,88 50,68 21,88 32,55 5,35 39,35" />
+                    </svg>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -215,7 +249,7 @@ export const EnvelopeGatefold: React.FC<EnvelopeGatefoldProps> = ({ onOpen, isOp
             <div
               className={`absolute top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 transition-all duration-500 cursor-pointer ${
                 openingState !== 'closed'
-                  ? 'scale-125 opacity-0 -translate-y-8 pointer-events-none'
+                  ? 'seal-pop pointer-events-none'
                   : 'hover:scale-110 active:scale-95'
               }`}
               onClick={handleOpenEnvelope}
