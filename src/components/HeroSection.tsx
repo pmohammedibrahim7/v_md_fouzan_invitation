@@ -141,7 +141,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onReopenEnvelope }) =>
         </div>
 
         {/* Date and City Highlight */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs md:text-sm font-subserif text-[#4a2e37] font-medium">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm md:text-base font-subserif text-[#2d1720] font-bold">
           <div className="flex items-center gap-2">
             <Calendar className="w-4 h-4 text-[#9a6a15]" />
             <span>Saturday, 30.01.2027</span>
@@ -149,7 +149,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onReopenEnvelope }) =>
           <span className="text-[#d4af37]">•</span>
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-[#9a6a15]" />
-            <span>Nikah at 11:30 AM &bull; Valima on Same Day</span>
+            <span>Nikah at 11:30 AM &bull; Valima After Zohar</span>
           </div>
           <span className="text-[#d4af37]">•</span>
           <div className="flex items-center gap-2">

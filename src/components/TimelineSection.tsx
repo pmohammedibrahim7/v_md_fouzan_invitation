@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, MapPin, ExternalLink, Download, Check, Sparkles } from 'lucide-react';
+import { Calendar, Clock, MapPin, Map, Download, Check, Sparkles } from 'lucide-react';
 import { EventItem } from '../types';
 
 export const TimelineSection: React.FC = () => {
@@ -28,7 +28,7 @@ export const TimelineSection: React.FC = () => {
       title: 'Dawat-e-Valima Reception',
       arabicTitle: '',
       dateStr: 'Saturday, January 30, 2027 (On Same Day)',
-      timeStr: 'Following Nikah Ceremony (On Same Day)',
+      timeStr: 'After Zohar on Same Day',
       dateIso: '20270130T133000',
       venue: 'Shaad Function Hall',
       city: 'Pernambut',
@@ -172,7 +172,7 @@ export const TimelineSection: React.FC = () => {
                     rel="noreferrer"
                     className="py-2 px-2.5 rounded-xl bg-white/90 border border-[#d4af37]/35 text-[#542d38] hover:bg-[#fff0f2] hover:text-[#2d1720] transition-all flex items-center justify-center gap-1.5 font-medium shadow-sm"
                   >
-                    <ExternalLink className="w-3.5 h-3.5 text-[#9a6a15]" />
+                    <Map className="w-3.5 h-3.5 text-[#9a6a15]" />
                     <span>Directions</span>
                   </a>
 
